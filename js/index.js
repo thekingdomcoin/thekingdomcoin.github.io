@@ -53,7 +53,7 @@ async function loadInitialData(sClass) {
 
         console.log('totalLockedTokens', totalLockedTokens);
 
-        $('#total-locked-tokens').html(`${totalLockedTokens / 10**9} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`);
+        $('#total-locked-tokens').html(`${totalLockedTokens / 10**18} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`);
 
         let totalUsers = await cObj.methods.getTotalUsers().call();
 
@@ -75,7 +75,7 @@ async function loadInitialData(sClass) {
         let minA;
 
         if(minStakeAmount) {
-            minA = `${(minStakeAmount / 10 ** 9).toLocaleString()} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`;
+            minA = `${(minStakeAmount / 10 ** 18).toLocaleString()} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`;
 
         } else {
             minA = 'N/A';
