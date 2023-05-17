@@ -248,7 +248,7 @@ async function stackTokens() {
 
         nTokens = Number(nTokens);
 
-        let tokenToTransfer = addDecimal(nTokens, 9);
+        let tokenToTransfer = addDecimal(nTokens, 18);
         // let tokenToTransfer = (nTokens) * 10 ** _CONTRACT_DATA[_NETWORK_ID].ERC20_MTNK.decimals;
         // tokenToTransfer = tokenToTransfer.toString();
 
@@ -258,7 +258,7 @@ async function stackTokens() {
 
         let balMainUser = await oContractToken.methods.balanceOf(selectedAccount).call();
 
-        balMainUser = Number(balMainUser) / (10 ** 9);
+        balMainUser = Number(balMainUser) / (10 ** 18);
 
         console.log('balMainUser', balMainUser);
 
@@ -387,7 +387,7 @@ async function unstackTokens() {
 
         nTokens = Number(nTokens);
 
-        let tokenToTransfer = addDecimal(nTokens, 9);
+        let tokenToTransfer = addDecimal(nTokens, 18);
         // let tokenToTransfer = (nTokens) * 10 ** _CONTRACT_DATA[_NETWORK_ID].ERC20_MTNK.decimals;
         // tokenToTransfer = tokenToTransfer.toString();
 
@@ -400,7 +400,7 @@ async function unstackTokens() {
 
         let balMainUser = await oContractStacking.methods.getUser(selectedAccount).call();
 
-        balMainUser = Number(balMainUser.stakeAmount) / (10 ** 9);
+        balMainUser = Number(balMainUser.stakeAmount) / (10 ** 18);
 
         console.log('balMainUser', balMainUser);
 
@@ -553,7 +553,7 @@ async function refreshBal(sClass) {
 
     console.log('nBalMain', nBalMain);
 
-    let nBalMainW = nBalMain / 10**9;
+    let nBalMainW = nBalMain / 10**18;
 
     $('#user-main-balance').attr('bal', nBalMainW).html(`Balance: ${nBalMainW} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`);
 
@@ -563,7 +563,7 @@ async function refreshBal(sClass) {
 
     console.log('nBalStack', nBalStack.stakeAmount);
 
-    let nBalStackW = nBalStack.stakeAmount / 10**9;
+    let nBalStackW = nBalStack.stakeAmount / 10**18;
 
     $('#user-staked-balance').attr('bal', nBalStackW).html(`${nBalStackW} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`);
 
@@ -571,7 +571,7 @@ async function refreshBal(sClass) {
 
     console.log('rewardBal', rewardBal);
 
-    $('#user-reward-balance').html(`Reward: ${rewardBal / 10 ** 9} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`);
+    $('#user-reward-balance').html(`Reward: ${rewardBal / 10 ** 18} ${_CONTRACT_DATA[_NETWORK_ID].TOKEN.symbol}`);
 }
 
 async function getTxhistory(sClass) {
