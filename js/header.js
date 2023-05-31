@@ -18,7 +18,7 @@ _CONTRACT_DATA[_NETWORK_ID] = {
             address: '0xad53196E46e04AB53105E7F1f2BAda16C1CfF237'
         },
         thirtyTwoDays: {
-            address: '0xc12cF5f7841872560708a820Eb6f55ACF8236AcD'
+            address: '0x53d5Ed2ecfa56429eaf96030C52e71558c46d6d8'
         },
         ninetyDays: {
             address: '0xab98e12A3881A8B8539029152B1B520419acbAAa'
