@@ -3857,7 +3857,7 @@ body .modal-backdrop {
 }
 
 .project-details-conent .readon {
-  background: #00D2D4;
+  background: #b38c00;
   border-color: #00D2D4;
   border: 2px solid #3C3D4F;
   -webkit-transition: 0.4s;
@@ -3964,7 +3964,7 @@ body .modal-backdrop {
 }
 
 .project-details-conent .project-item .project-form-list .balance-form-area .approve input[type="submit"] {
-  background: #00D2D4;
+  background: #b38c00;
 }
 
 .project-details-conent .project-item .hover-shape-inner {
